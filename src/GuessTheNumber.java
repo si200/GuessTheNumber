@@ -12,21 +12,20 @@ public static void guessTheNumber() {
     Random random = new Random();
 
     int randomNum;
+    int guessNum;
         
         randomNum = random.nextInt(10) +1;
 
-        System.out.println("Guess a number between 1 and 10: ");
-        int guessNum = scanner.nextInt();
-
     do {
+        System.out.println("Guess a number between 1 and 10: ");
+        guessNum = scanner.nextInt();
+
         if (guessNum == randomNum) {
                System.out.println("Correct! The Number was " + randomNum);
         }
         else {
                System.out.println("Too low! Try again.");
         }
-        System.out.println("Guess a number between 1 and 10: ");
-        guessNum = scanner.nextInt();
     }
     while (guessNum != randomNum);
 
