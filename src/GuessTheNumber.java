@@ -18,16 +18,15 @@ public static void guessTheNumber() {
         System.out.println("Guess a number between 1 and 10: ");
         int guessNum = scanner.nextInt();
 
-    if (guessNum == randomNum) {
-            System.out.println("Correct! The Number was " + randomNum);
+    do {
+        if (guessNum == randomNum) {
+               System.out.println("Correct! The Number was " + randomNum);
+        }
+        else {
+               System.out.println("Too low! Try again.");
+        }
     }
-    else {
-            System.out.println("Too low! Try again.");
-    }
-
-
-
-
+    while (guessNum != randomNum);
 
     scanner.close();
 }
