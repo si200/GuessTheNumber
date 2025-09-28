@@ -9,7 +9,7 @@ public class GuessTheNumber {
 
 public static void guessTheNumber() {
     Scanner scanner = new Scanner(System.in);
-    Random random = new Random(11);
+    Random random = new Random();
 
     int randomNum;
         
@@ -25,6 +25,8 @@ public static void guessTheNumber() {
         else {
                System.out.println("Too low! Try again.");
         }
+        System.out.println("Guess a number between 1 and 10: ");
+        guessNum = scanner.nextInt();
     }
     while (guessNum != randomNum);
 
@@ -33,6 +35,6 @@ public static void guessTheNumber() {
 
 public static void main (String[] arg) {
     guessTheNumber();
-}
+   }
 
 }
