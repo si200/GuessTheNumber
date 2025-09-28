@@ -23,8 +23,11 @@ public static void guessTheNumber() {
         if (guessNum == randomNum) {
                System.out.println("Correct! The Number was " + randomNum);
         }
-        else {
+        else if (guessNum < randomNum){
                System.out.println("Too low! Try again.");
+        }
+        else {
+                System.out.println("Too high! Try again.");
         }
     }
     while (guessNum != randomNum);
@@ -35,5 +38,4 @@ public static void guessTheNumber() {
 public static void main (String[] arg) {
     guessTheNumber();
    }
-
 }
